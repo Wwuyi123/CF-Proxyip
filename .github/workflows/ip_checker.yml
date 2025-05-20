@@ -15,7 +15,7 @@ permissions:
 
 jobs:
   check-ips:
-    runs-on: ubuntu-latest  # 在最新的 Ubuntu 环境中运行
+    runs-on: windows-latest # 在最新的 Ubuntu 环境中运行
 
     steps:
       # 第一步：检出仓库代码
