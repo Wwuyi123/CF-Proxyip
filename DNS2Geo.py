@@ -1,10 +1,12 @@
+import sys
+sys.stdout.reconfigure(encoding='utf-8')
+
 import dns.resolver
 import time
 import requests
 import socket
 import os
 import subprocess
-import sys
 import csv
 
 def load_country_mapping(file_path):
