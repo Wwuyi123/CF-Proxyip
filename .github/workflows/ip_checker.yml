@@ -7,7 +7,7 @@ on:
 
 permissions:
   contents: write
-  actions: write
+  actions: read    
 
 jobs:
   run-script:
@@ -17,6 +17,8 @@ jobs:
       GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       GITHUB_ACTOR: ${{ github.actor }}
       PYTHONIOENCODING: utf-8
+      COMMIT_USER_NAME: github-actions[bot]
+      COMMIT_USER_EMAIL: github-actions[bot]@users.noreply.github.com
 
     steps:
       - name: 检出代码
