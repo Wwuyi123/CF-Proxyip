@@ -208,8 +208,8 @@ def run_cloudflarescanner_with_dn():
             if line.strip():
                 ip_count += 1
     try:
-        # 传递参数-dn <数量>
-        subprocess.Popen([exe_path, "-dn", str(ip_count)], cwd="CloudflareScanner")
+        # 改为同步等待EXE结束
+        subprocess.run([exe_path, "-dn", str(ip_count)], cwd="CloudflareScanner")
         print(f"已启动 {exe_path} -dn {ip_count}")
     except Exception as e:
         print(f"运行 {exe_path} 时发生错误: {e}")
