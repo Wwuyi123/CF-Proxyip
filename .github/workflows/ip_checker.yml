@@ -41,3 +41,12 @@ jobs:
 
       - name: 运行 DNS2Geo 脚本
         run: python DNS2Geo.py
+
+      - name: 上传结果文件
+        uses: actions/upload-artifact@v4
+        with:
+          name: result-files
+          path: |
+            ips/
+            ips_with_country/
+            CloudflareScanner/ip.txt
