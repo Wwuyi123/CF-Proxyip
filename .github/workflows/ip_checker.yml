@@ -5,7 +5,7 @@ on:
   workflow_dispatch:
   # 定时触发，每 3 小时一次
   schedule:
-    - cron: '0 */6 * * *'
+    - cron: '0 */12 * * *'
 
 permissions:
   contents: write  # 允许修改仓库内容
